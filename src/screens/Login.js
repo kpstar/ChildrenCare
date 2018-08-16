@@ -1,67 +1,65 @@
 import React, { Component } from 'react';
 import {
-    Platform,
-    StyleSheet,
-    View, 
-    Image
-  } from 'react-native';
-import { images, Colors } from '../theme';
-import { Container, Content, Button, Icon, Form, Item, Label, Input, Text, Footer} from 'native-base';
-import { responsiveWidth, responsiveHeight } from 'react-native-responsive-dimensions';
-export default class FloatingLabelExample extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            email: '',
-            password: '',
-        }
+  StyleSheet,
+  TouchableOpacity,
+  Image,
+  View
+} from 'react-native';
+import { strings } from '../services/i18n';
+import { responsiveWidth, responsiveHeight, responsiveFontSize } from 'react-native-responsive-dimensions';
+import { Images, Colors, FontSizes } from '../theme';
+import { Container, Content, Button, Text } from 'native-base';
+
+export default class Login extends Component {
+
+    componentDidMount() {
+
     }
-  render() {
-    return (
-        <Container>
-            <Content contentContainerStyle={styles.container}>
-                <Form style={styles.form}>
-                    <Item floatingLabel last>
-                        <Label>Email</Label>
-                        <Input autoCapitalize='none' autoCorrect={false} value={this.state.email} onChangeText={text=>this.setState({email: text})}/>
-                    </Item>
-                    <Item floatingLabel last>
-                        <Label>Password</Label>
-                        <Input secureTextEntry={true} value={this.state.password} onChangeText={text=>this.setState({password: text})}/>
-                    </Item>
-                </Form>
-                <Button block primary onPress={this.onLogin.bind(this)}><Text>Sign in</Text></Button>
-            </Content>
-        </Container>
-    );
-  }
 
-  onLogin() {
-    //  this.props.navigation.navigate('LevelScreen')
-  }
+    render() {
+        return (
+            <Container style={styles.container}>
+                <View>
+                    <Text style={styles.text}>{ strings('login_parent_title.value') }</Text>
+                    <TouchableOpacity onPress={ () => this.onPress('ParentLoginScreen')}>
+                        <Image
+                            style={styles.button}
+                            source={Images.parent}
+                        />
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <Text style={styles.text}>{ strings('login_children_title.value') }</Text>
+                    <TouchableOpacity onPress={ () => this.onPress('ChildrenLoginScreen')}>
+                        <Image
+                            style={styles.button}
+                            source={Images.children}
+                        />
+                    </TouchableOpacity> 
+                </View>                               
+            </Container>
+        )
+    }
 
+    onPress = (option) => {
+        this.props.navigation.navigate(option);
+    }
 }
 
 const styles = StyleSheet.create({
     container: {
-        flexGrow: 1,
-        padding: 24,
-        paddingTop: responsiveHeight(5),
-        backgroundColor: Colors.backgroundPrimary,
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-
-    form: {
-        marginVertical: 24,
-    }, 
-
-    footer: {
-        backgroundColor: '#fff0',
+        flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: Colors.Red,
+    },
+    text: {
+        color: Colors.white,
+        textAlign: 'center',
+        margin: 20,
+        fontSize: FontSizes.medium
+    },
+    button: {
+        alignItems: 'center',
     }
 });

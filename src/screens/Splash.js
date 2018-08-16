@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
-  View, 
-  Image
+  ImageBackground
 } from 'react-native';
-import { responsiveWidth, responsiveHeight } from 'react-native-responsive-dimensions';
+import { Images } from '../theme';
+import { Container } from 'native-base';
 
 export default class Splash extends Component {
 
     componentDidMount() {
+        setTimeout(()=>{
+            this.props.navigation.navigate('LoginScreen');
+        }, 200)
     }
 
     render() {
         return (
-            <Container>
-                <Content contentContainerStyle={styles.container}>
-                    <Image></Image>
-                </Content>
+            <Container style={styles.container}>
+                <ImageBackground source={Images.spalshBk}  style={styles.image} ></ImageBackground>
             </Container>
         )
     }
@@ -25,6 +25,10 @@ export default class Splash extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flexGrow: 1
+        flex: 1,
+        alignItems: 'stretch'
+    },
+    image: {
+        flex: 1
     },
 });

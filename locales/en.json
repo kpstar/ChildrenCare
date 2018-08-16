@@ -1,0 +1,26 @@
+{
+    "app_name":{
+        "value": "Tadaima"
+    },
+    "login_parent_title":{
+        "value": "Parent"
+    },
+    "login_children_title":{
+        "value": "Children"
+    },
+    "login_button_email_title":{
+        "value": "Login with email address"
+    },
+    "login_button_phone_title":{
+        "value": "Login with phone number"
+    },
+    "login_button_scanqr_title":{
+        "value": "Scan QR"
+    },
+    "mobile_number_text_placeholder":{
+        "value": "Enter mobild number"
+    },
+    "terms_and_condition_title":{
+        "value": "Terms and condition"
+    }
+}
