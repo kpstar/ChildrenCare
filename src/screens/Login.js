@@ -6,16 +6,10 @@ import {
   View
 } from 'react-native';
 import { strings } from '../services/i18n';
-import { responsiveWidth, responsiveHeight, responsiveFontSize } from 'react-native-responsive-dimensions';
 import { Images, Colors, FontSizes } from '../theme';
-import { Container, Content, Button, Text } from 'native-base';
+import { Container, Text } from 'native-base';
 
 export default class Login extends Component {
-
-    componentDidMount() {
-
-    }
-
     render() {
         return (
             <Container style={styles.container}>

@@ -14,13 +14,40 @@
     "login_button_phone_title":{
         "value": "Login with phone number"
     },
+    "signup_button_email_title":{
+        "value": "Register with email address"
+    },
+    "signup_button_phone_title":{
+        "value": "Register with phone number"
+    },
+    "signup_mode_button_title":{
+        "value": "Already have account ?"
+    },
+    "login_mode_button_title":{
+        "value": "Register new account ?"
+    },
     "login_button_scanqr_title":{
         "value": "Scan QR"
+    },
+    "login_button_library_title":{
+        "value": "Login with library"
     },
     "mobile_number_text_placeholder":{
         "value": "Enter mobild number"
     },
     "terms_and_condition_title":{
         "value": "Terms and condition"
+    },
+    "login_text_email_placeholder":{
+        "value": "Email"
+    },
+    "login_text_password_placeholder":{
+        "value": "Password"
+    },
+    "email_login_button_title":{
+        "value": "Sign In"
+    },
+    "email_signup_button_title":{
+        "value": "Register"
     }
 }

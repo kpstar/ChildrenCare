@@ -26,6 +26,7 @@ const colors = {
     golden: '#FFAA00',
     gray: '#AAAAAA',
     lightGray: '#d3d3d3',
+    buttonColor: '#551919',
     white: "#fff",  
   };
     
