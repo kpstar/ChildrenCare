@@ -94,17 +94,18 @@ export default class EmailVerification extends Component {
     }
 
     onSignup() {
-        this.setState({ error: '', loading: true, });
-        const {email, password} =  this.state;
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-            .then(() => {
-                this.setState({ error: '', loading: false });
-                this.props.navigation.navigate('MapScreen');
-            })
-            .catch((error) => {
-                alert(error);
-                this.setState({error: error, loading: false});
-            });
+        this.props.navigation.navigate('MapScreen');
+        // this.setState({ error: '', loading: true, });
+        // const {email, password} =  this.state;
+        // firebase.auth().createUserWithEmailAndPassword(email, password)
+        //     .then(() => {
+        //         this.setState({ error: '', loading: false });
+        //         this.props.navigation.navigate('MapScreen');
+        //     })
+        //     .catch((error) => {
+        //         alert(error);
+        //         this.setState({error: error, loading: false});
+        //     });
     }
 
     goBack = () => {
