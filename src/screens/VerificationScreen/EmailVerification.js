@@ -83,7 +83,10 @@ export default class EmailVerification extends Component {
         this.setState({ error: '', loading: true, });
         const {email, password} =  this.state;
         firebase.auth().signInWithEmailAndPassword(email, password)
-            .then(() => { this.setState({ error: '', loading: false }); })
+            .then(() => { 
+                this.setState({ error: '', loading: false });
+                
+            })
             .catch((error) => {
                 alert(error);
                 this.setState({error: error, loading: false});
@@ -94,7 +97,10 @@ export default class EmailVerification extends Component {
         this.setState({ error: '', loading: true, });
         const {email, password} =  this.state;
         firebase.auth().createUserWithEmailAndPassword(email, password)
-            .then(() => { this.setState({ error: '', loading: false }); })
+            .then(() => {
+                this.setState({ error: '', loading: false });
+                this.props.navigation.navigate('MapScreen');
+            })
             .catch((error) => {
                 alert(error);
                 this.setState({error: error, loading: false});

@@ -13,7 +13,9 @@ import Parent from "./screens/LoginScreen/Parent"
 import Children from "./screens/LoginScreen/Children"
 import PhoneNumber from "./screens/VerificationScreen/PhoneNumber"
 import EmailScreen from "./screens/VerificationScreen/EmailVerification"
-// import Question from "./screens/Question"
+import ChildrenInfo from "./screens/InfoScreen/ChildrenInfo"
+import ParentInfo from "./screens/InfoScreen/ParentInfo"
+import MapScreen from "./screens/MainScreen/MapScreen"
 
 export const PrimaryNav = StackNavigator({
     
@@ -23,6 +25,9 @@ export const PrimaryNav = StackNavigator({
     ChildrenLoginScreen: {screen: Children},
     PhoneScreen: {screen: PhoneNumber},
     EmailScreen: {screen: EmailScreen},
+    ChildInfoScreen: {screen: ChildrenInfo},
+    ParentInfoScreen: {screen: ParentInfo},
+    MapScreen: {screen: MapScreen},
     // LevelScreen: {screen: Level},
     // QuestionScreen: {screen: Question},
 }, {
